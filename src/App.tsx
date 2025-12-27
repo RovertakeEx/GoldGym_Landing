@@ -12,7 +12,7 @@ function App() {
       <main className='flex-1'>
         <Index/>
         <div className='p-3'>
-         <ToastContainer position="top-right" autoClose={3000} theme="light" />
+         <ToastContainer position="top-right" autoClose={3000} theme="dark" />
         </div>
       </main>
       <Footer/>

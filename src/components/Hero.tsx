@@ -70,10 +70,10 @@ const Hero = () => {
               Join Today
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </button>
-            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-semibold ring-offset-background transition-all duration-300 border-2 border-primary bg-transparent text-primary hover:bg-primary/10 hover:shadow-[0_0_30px_hsl(43_70%_52%/0.3)] hover:scale-[1.02] active:scale-[0.98] h-14 rounded-2xl px-10 text-lg group">
+            <a href='#pricing' className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-semibold ring-offset-background transition-all duration-300 border-2 border-primary bg-transparent text-primary hover:bg-primary/10 hover:shadow-[0_0_30px_hsl(43_70%_52%/0.3)] hover:scale-[1.02] active:scale-[0.98] h-14 rounded-2xl px-10 text-lg group">
               <Play className="w-5 h-5" />
               View Plans
-            </button>
+            </a>
           </div>
 
           {/* Stats */}
@@ -82,9 +82,9 @@ const Hero = () => {
             style={{ animationDelay: "0.5s" }}
           >
             {[
-              { value: "500+", label: "Active Members" },
-              { value: "10+", label: "Years Experience" },
-              { value: "15+", label: "Expert Trainers" },
+              { value: "100+", label: "Active Members" },
+              { value: "5+", label: "Years Experience" },
+              { value: "2+", label: "Expert Trainers" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="font-display font-bold text-3xl sm:text-4xl gold-text mb-1">
