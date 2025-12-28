@@ -1,6 +1,20 @@
+import { useState } from 'react'
+import PackageDialog from './dialogs/PackageDialog';
 import { Check, Sparkles, Crown, Zap } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const pricingPlans = [
+interface Plan {
+  name: string,
+  price: string,
+  period: string,
+  description: string,
+  icon: LucideIcon,
+  features: string[],
+  popular: boolean,
+  registration: boolean
+}
+
+const pricingPlans : Plan[] = [
   {
     name: "Registration",
     price: "2,000",
@@ -14,6 +28,7 @@ const pricingPlans = [
       "Fitness assessment",
     ],
     popular: false,
+    registration: true
   },
   {
     name: "Monthly",
@@ -29,6 +44,7 @@ const pricingPlans = [
       "Monthly progress check",
     ],
     popular: true,
+    registration: false
   },
   {
     name: "Personal Training",
@@ -45,6 +61,7 @@ const pricingPlans = [
       "All Monthly benefits",
     ],
     popular: false,
+    registration: false
   },
   {
     name: "Annual Package",
@@ -61,10 +78,22 @@ const pricingPlans = [
       "Merchandise discount",
     ],
     popular: false,
+    registration: false
   },
 ];
 
 const Pricing = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedPlan, setSelectedPlan] = useState("");
+    const [selectedPlanPopular, setselectedPlanPopular] = useState(false);
+
+    const handlePlanClick = (packageName: string, isPopular: boolean) => {
+      setSelectedPlan(packageName);
+      setselectedPlanPopular(isPopular);
+      setIsModalOpen(true);
+    };
+
   return (
     <section id="pricing" className="relative overflow-hidden">
       {/* Background */}
@@ -158,13 +187,15 @@ const Pricing = () => {
               {/* CTA Button */}
               <button
                 className={`inline-flex items-center justify-center gap-2 whitespace-nowrap font-semibold ring-offset-background transition-all duration-300 hover:bg-primary/10 hover:shadow-[0_0_30px_hsl(43_70%_52%/0.3)] hover:scale-[1.02] active:scale-[0.98] h-12 rounded-2xl px-8 text-base w-full ${plan.popular ? "bg-gold-gradient text-background font-bold" : "border-2 border-primary bg-transparent text-primary"}`}
+                onClick={() => handlePlanClick(plan.name, plan.popular)}
               >
-                Get Started
+               {plan.registration ? "Get Started" : "Join Now"}
               </button>
             </div>
           ))}
         </div>
       </div>
+      <PackageDialog isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} packageName={selectedPlan} isPopular={selectedPlanPopular}/>
     </section>
   );
 };

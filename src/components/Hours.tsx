@@ -21,7 +21,7 @@ const Hours = () => {
                     Opening Hours
                   </h2>
                   <p className="text-muted-foreground">
-                    We're open every day for your convenience
+                    We're open every day for your convenience except sunday
                   </p>
                 </div>
               </div>

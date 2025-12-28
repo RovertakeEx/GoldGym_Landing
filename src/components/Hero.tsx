@@ -66,10 +66,10 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up"
             style={{ animationDelay: "0.4s" }}
           >
-            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-all duration-300 bg-gold-gradient text-background font-bold shadow-lg hover:shadow-[0_0_30px_hsl(43_70%_52%/0.4)] hover:scale-[1.02] active:scale-[0.98] h-14 rounded-2xl px-10 text-lg group">
-              Join Today
+            <a href='#about' className="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-all duration-300 bg-gold-gradient text-background font-bold shadow-lg hover:shadow-[0_0_30px_hsl(43_70%_52%/0.4)] hover:scale-[1.02] active:scale-[0.98] h-14 rounded-2xl px-10 text-lg group">
+              Get Started
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </button>
+            </a>
             <a href='#pricing' className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-semibold ring-offset-background transition-all duration-300 border-2 border-primary bg-transparent text-primary hover:bg-primary/10 hover:shadow-[0_0_30px_hsl(43_70%_52%/0.3)] hover:scale-[1.02] active:scale-[0.98] h-14 rounded-2xl px-10 text-lg group">
               <Play className="w-5 h-5" />
               View Plans

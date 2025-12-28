@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send, MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+import { Send, MapPin, Phone, Mail, ArrowRight, MessageCircle } from "lucide-react";
 // import { toast } from "sonner";
 import { toast } from "react-toastify";
 
@@ -13,7 +13,34 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!formData.name || !formData.phone || !formData.email || !formData.message) {
+      toast.error("Please fill in all required fields.");
+      return;
+    }
+
+    // Format message
+    const message = `
+Message request from website
+    
+Name    :  _${formData.name}_
+email   :  _${formData.email}_
+phone   :  _${formData.phone}_
+
+*Message  :* 
+${formData.message}`;
+
+    const encodedMessage = encodeURIComponent(message);
+
+    // Detect if device is mobile
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    const url = isMobile
+      ? `whatsapp://send?phone=${"94717100072"}&text=${encodedMessage}` // opens WhatsApp app on mobile
+      : `https://wa.me/${"94717100072"}?text=${encodedMessage}`; // opens WhatsApp Web/Desktop
+
     toast.success("Message sent successfully! We'll get back to you soon.");
+    window.open(url, "_blank");
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
@@ -168,7 +195,8 @@ const Contact = () => {
                 />
               </div>
               <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-all duration-300 bg-gold-gradient text-background font-bold shadow-lg hover:shadow-[0_0_30px_hsl(43_70%_52%/0.4)] hover:scale-[1.02] active:scale-[0.98] h-14 rounded-2xl px-10 text-lg w-full group">
-                <Send className="w-5 h-5" />
+                {/* <Send className="w-5 h-5" /> */}
+                <MessageCircle className="w-5 h-5"/>
                 Send Message
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>

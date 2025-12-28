@@ -110,9 +110,9 @@ const Footer = () => {
               Contact
             </h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>123 Fitness Street</li>
-              <li>Colombo, Sri Lanka</li>
-              <li className="text-primary">+94 11 234 5678</li>
+              <li>123 main Street</li>
+              <li>Kanthale, Sri Lanka</li>
+              <li className="text-primary">+94 77 075 0851</li>
               <li className="text-primary">info@goldgym.lk</li>
             </ul>
           </div>
