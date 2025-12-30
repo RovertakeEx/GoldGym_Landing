@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send, MapPin, Phone, Mail, ArrowRight, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, ArrowRight, MessageCircle } from "lucide-react";
 // import { toast } from "sonner";
 import { toast } from "react-toastify";
 

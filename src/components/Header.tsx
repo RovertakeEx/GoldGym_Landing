@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Dumbbell } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import logo from "../assets/img/gold-gym-logo.png"
 
 const navLinks = [

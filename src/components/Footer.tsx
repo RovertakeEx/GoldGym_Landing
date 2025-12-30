@@ -1,4 +1,4 @@
-import { Dumbbell, Facebook, Instagram, MessageCircle, ArrowUp, Music2 } from "lucide-react";
+import { Dumbbell, Facebook, MessageCircle, ArrowUp, Music2 } from "lucide-react";
 
 const footerLinks = {
   quickLinks: [
