@@ -36,8 +36,8 @@ ${formData.message}`;
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     const url = isMobile
-      ? `whatsapp://send?phone=${"94717100072"}&text=${encodedMessage}` // opens WhatsApp app on mobile
-      : `https://wa.me/${"94717100072"}?text=${encodedMessage}`; // opens WhatsApp Web/Desktop
+      ? `whatsapp://send?phone=${"94770750851"}&text=${encodedMessage}` // opens WhatsApp app on mobile
+      : `https://wa.me/${"94770750851"}?text=${encodedMessage}`; // opens WhatsApp Web/Desktop
 
     toast.success("Message sent successfully! We'll get back to you soon.");
     window.open(url, "_blank");
