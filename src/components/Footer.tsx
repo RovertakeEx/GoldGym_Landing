@@ -20,7 +20,7 @@ const socialLinks = [
   { name: "WhatsApp", icon: MessageCircle, href: "https://wa.me/94770750851" },
   { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/profile.php?id=61572501547974" },
   //{ name: "Instagram", icon: Instagram, href: "https://instagram.com" },
-  { name: "Tiktok", icon: Music2, href: "tiktok.com/@gold.gym.kanthale" },
+  { name: "Tiktok", icon: Music2, href: "https://tiktok.com/@gold.gym.kanthale" },
 ];
 
 const Footer = () => {
