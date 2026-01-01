@@ -123,10 +123,10 @@ ${formData.message}`;
                     Join our community of dedicated fitness enthusiasts
                   </p>
                 </div>
-                <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-all duration-300 bg-gold-gradient text-background font-bold shadow-lg hover:shadow-[0_0_30px_hsl(43_70%_52%/0.4)] hover:scale-[1.02] active:scale-[0.98] h-12 rounded-2xl px-8 text-base group">
+                <a href="https://chat.whatsapp.com/LHvzAvNMtpXHiVrOOMZUDh" className="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-all duration-300 bg-gold-gradient text-background font-bold shadow-lg hover:shadow-[0_0_30px_hsl(43_70%_52%/0.4)] hover:scale-[1.02] active:scale-[0.98] h-12 rounded-2xl px-8 text-base group" target="_blank">
                   Join Now
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
